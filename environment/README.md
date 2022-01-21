@@ -1,16 +1,16 @@
-# environment
+# DART DEFINE ENVIRONMENT
 
 A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Run and define your:
 
-A few resources to get you started if this is your first Flutter project:
+- `DEFINEEXAMPLE_APP_NAME` value. If this parameter not provider,
+  `awesomeApp` will be used instead as a value
+- 
+- `DEFINEEXAMPLE_APP_SUFFIX` value. If this parameter not provider, app
+  suffix will be empty
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+`flutter run --dart-define=DEFINEEXAMPLE_APP_NAME=VeryAwesomeApp
+--dart-define=DEFINEEXAMPLE_APP_SUFFIX=.dev`
