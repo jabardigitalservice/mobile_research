@@ -36,6 +36,17 @@ class MainApp extends StatelessWidget {
     var content = await rootBundle.load('assets/file-example');
     final mime =
         lookupMimeType('temp', headerBytes: content.buffer.asUint8List());
-    return 'MimeType = $mime';
+    final ext = getExtensionsFromType(mime);
+    return 'MimeType = $mime \nExtension = $ext';
+  }
+
+  static String? getExtensionsFromType(String? type) {
+    if (type == null || type.isEmpty) return null;
+
+    if (database.containsKey(type)) {
+      return database[type];
+    }
+
+    return null;
   }
 }
